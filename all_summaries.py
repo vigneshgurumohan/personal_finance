@@ -34,7 +34,7 @@ def generate_narrative(insight):
             f"Data: {insight.get('data', {})}"
         )
         response = client.chat.completions.create(
-            model="gpt-3.5-turbo",
+            model=os.getenv("MODEL", "gpt-3.5-turbo"),
             messages=[{"role": "system", "content": prompt}],
             max_tokens=80
         )
@@ -51,7 +51,7 @@ def generate_overall_narrative(insight_narratives):
             f"Insights:\n- " + "\n- ".join(insight_narratives)
         )
         response = client.chat.completions.create(
-            model="gpt-3.5-turbo",
+            model=os.getenv("MODEL", "gpt-3.5-turbo"),
             messages=[{"role": "system", "content": prompt}],
             max_tokens=120
         )

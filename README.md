@@ -1,415 +1,402 @@
-# 🏦 Personal Finance Assistant
+# Personal Finance Assistant with AI
 
-A comprehensive AI-powered personal finance analysis and chat application that provides intelligent insights into your spending patterns, budget recommendations, and financial trends using OpenAI's GPT models.
+A comprehensive personal finance management system that uses AI to analyze transaction data, provide insights, and offer personalized financial advice. The system includes a web interface, REST API, and advanced analytics capabilities.
 
-## 📋 Table of Contents
+## 🚀 Features
 
-- [Features](#-features)
-- [Architecture](#-architecture)
-- [Prerequisites](#-prerequisites)
-- [Installation](#-installation)
-- [Configuration](#-configuration)
-- [Usage](#-usage)
-- [API Endpoints](#-api-endpoints)
-- [Data Processing](#-data-processing)
-- [Security](#-security)
-- [Troubleshooting](#-troubleshooting)
-- [Contributing](#-contributing)
-
-## ✨ Features
-
-### 🤖 AI-Powered Chat Interface
-- **Natural Language Queries**: Ask questions about your finances in plain English
-- **Context-Aware Responses**: AI remembers conversation context and provides personalized insights
-- **Multi-Modal Analysis**: Supports both structured data and natural language responses
-- **Real-time Processing**: Instant responses with intelligent data interpretation
-
-### 📊 Comprehensive Financial Analysis
-- **Transaction Summaries**: Detailed breakdowns by customer, category, and time period
-- **Merchant Analysis**: Top merchants by category and monthly spending patterns
-- **Trend Detection**: Identifies spending trends and anomalies
-- **Budget Insights**: Income vs. expense analysis with actionable recommendations
-
-### 🎯 Intelligent Insights Engine
-- **Trend Analysis**: Compares current spending with historical averages
-- **Anomaly Detection**: Identifies unusual transactions and spending patterns
-- **Savings Opportunities**: Highlights areas where spending has decreased
-- **Recurring Payment Tracking**: Monitors regular payments and subscriptions
-- **Budget Overrun Alerts**: Warns when expenses exceed income
-
-### 🛠️ Advanced Tools
-- **Raw Transaction Filtering**: Advanced query parsing for specific transaction searches
-- **Budget Planning Tool**: Interactive budget creation and analysis
-- **Spends Analyzer**: Deep dive into expense patterns and categories
-- **Markdown Table Generation**: Clean, formatted data presentation
-
-### 🔄 Data Processing Pipeline
-- **Automated Summaries**: Generates comprehensive financial summaries
-- **Multi-format Support**: Handles CSV data with flexible parsing
-- **Real-time Updates**: Processes new transactions and updates insights
-- **Scalable Architecture**: Supports multiple customers with isolated data
-
-## 🏗️ Architecture
-
-```
-┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
-│   Frontend      │    │   FastAPI       │    │   Data Layer    │
-│   (HTML/JS)     │◄──►│   Backend       │◄──►│   (CSV/JSON)    │
-└─────────────────┘    └─────────────────┘    └─────────────────┘
-                              │
-                              ▼
-                       ┌─────────────────┐
-                       │   OpenAI API    │
-                       │   (GPT-3.5)     │
-                       └─────────────────┘
-```
-
-### Core Components
-
-1. **FastAPI Web Server** (`main.py`)
-   - RESTful API endpoints
-   - WebSocket support for real-time chat
-   - Static file serving
-   - CORS middleware
-
-2. **Data Processing Engine** (`all_summaries.py`)
-   - Transaction data analysis
-   - Summary generation
-   - Insight calculation
-   - JSON output formatting
-
-3. **AI Integration Layer**
-   - OpenAI GPT-3.5-turbo integration
-   - Natural language processing
-   - Context management
-   - Response generation
-
-4. **Frontend Interface** (`templates/index.html`)
-   - Interactive chat interface
-   - Real-time message display
-   - Markdown rendering
-   - Dynamic button controls
+- **AI-Powered Financial Analysis**: Uses OpenAI GPT models to analyze transaction patterns
+- **Interactive Chat Interface**: Natural language queries about your finances
+- **Data Visualization**: Charts and graphs for spending analysis
+- **Transaction Filtering**: Advanced filtering and search capabilities
+- **Budget Tools**: Monthly budget analysis and recommendations
+- **Insight Generation**: Automated financial insights and trends
+- **Multi-Customer Support**: Handles multiple customer profiles
+- **REST API**: Full API for integration with other systems
 
 ## 📋 Prerequisites
 
-- **Python 3.8+**
-- **OpenAI API Key** ([Get one here](https://platform.openai.com/api-keys))
-- **Transaction Data** in CSV format
-- **Internet Connection** for OpenAI API access
+- Python 3.8 or higher
+- PostgreSQL database
+- OpenAI API key
+- pip (Python package manager)
 
-## 🚀 Installation
+## 🛠️ Installation
 
-### 1. Clone the Repository
+1. **Clone the repository**
+   ```bash
+   git clone <repository-url>
+   cd Git1
+   ```
 
-```bash
-git clone <repository-url>
-cd personal_finance
-```
+2. **Install dependencies**
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-### 2. Install Dependencies
+3. **Set up environment variables**
+   Create a `.env` file in the root directory with the following variables:
+   ```env
+   # OpenAI Configuration
+   OPENAI_API_KEY=your_openai_api_key_here
+   MODEL=gpt-3.5-turbo
+   
+   # Database Configuration
+   DB_USER=your_database_username
+   DB_PASSWORD=your_database_password
+   DB_HOST=localhost
+   DB_PORT=5432
+   DB_NAME=your_database_name
+   
+   # Optional Configuration
+   DEBUG=True
+   LOG_LEVEL=INFO
+   ```
 
-```bash
-pip install -r requirements.txt
-```
+4. **Set up the database**
+   - Create a PostgreSQL database
+   - Import your transaction data into the `raw_transactions` table
+   - The table should have the following schema:
+     ```sql
+     CREATE TABLE raw_transactions (
+         transaction_id VARCHAR(255) PRIMARY KEY,
+         customer_id VARCHAR(255),
+         merchant_name VARCHAR(255),
+         transaction_date DATE,
+         transaction_month VARCHAR(7),
+         transaction_amount DECIMAL(10,2),
+         transaction_type VARCHAR(50),
+         merchant_category VARCHAR(255),
+         is_online BOOLEAN,
+         merchant_city VARCHAR(255),
+         merchant_logo TEXT,
+         transaction_currency VARCHAR(10)
+     );
+     ```
 
-### 3. Environment Setup
+5. **Generate data summaries**
+   ```bash
+   python all_summaries.py
+   ```
 
-Create a `.env` file in the root directory:
+## 🏃‍♂️ Running the Application
 
-```env
-# OpenAI API Configuration
-OPENAI_API_KEY=your_openai_api_key_here
-
-# Optional: Additional Configuration
-# DATABASE_URL=your_database_url_here
-# SECRET_KEY=your_secret_key_here
-# DEBUG=True
-```
-
-### 4. Data Preparation
-
-Place your transaction data in `data/raw_transactions.csv` with the following columns:
-
-```csv
-customer_id,transaction_date,transaction_type,transaction_category,merchant_name,transaction_amount,transaction_currency,transaction_mode
-1234,01-01-2024,Income,Salary,Company ABC,5000,AED,Bank Transfer
-1234,02-01-2024,Expense,Groceries,Supermarket XYZ,150,AED,Credit Card
-```
-
-### 5. Generate Summaries
-
-```bash
-python all_summaries.py
-```
-
-This will create the following files in the `summaries/` directory:
-- `customer_transaction_summaries.json`
-- `top_merchants_by_category.json`
-- `top_merchants_by_month.json`
-- `raw_transactions_by_customer.json`
-- `insights_summary.json`
-
-### 6. Start the Application
-
+### Start the FastAPI server
 ```bash
 python main.py
 ```
 
 The application will be available at `http://localhost:8000`
 
-## ⚙️ Configuration
+### Alternative: Use uvicorn directly
+```bash
+uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+```
 
-### Environment Variables
+## 📁 Project Structure
 
-| Variable | Description | Required | Default |
-|----------|-------------|----------|---------|
-| `OPENAI_API_KEY` | Your OpenAI API key | Yes | - |
-| `DEBUG` | Enable debug mode | No | False |
+```
+Git1/
+├── api/                          # API layer
+│   ├── routes/                   # API route definitions
+│   │   ├── app_routes.py        # Main application routes
+│   │   ├── health.py            # Health check endpoints
+│   │   └── index_html.py        # HTML serving routes
+│   ├── services/                # Business logic services
+│   │   └── app_services.py      # Core application services
+│   └── utils/                   # Utility modules
+│       ├── agent.py             # AI agent implementations
+│       ├── helper.py            # Helper functions
+│       └── modals.py            # Pydantic models
+├── data/                        # Data files
+│   └── raw_transactions.csv     # Sample transaction data
+├── summaries/                   # Generated data summaries
+│   ├── customer_transaction_summaries.json
+│   ├── insights_summary.json
+│   ├── raw_transactions_by_customer.json
+│   ├── top_merchants_by_category.json
+│   └── top_merchants_by_month.json
+├── static/                      # Static files
+├── templates/                   # HTML templates
+├── all_summaries.py            # Data summary generator
+├── database.py                 # Database connection
+├── main.py                     # FastAPI application entry point
+├── sql_db_agent.py             # SQL database agent
+├── test_chat.py                # Testing script
+├── travel_api_agent.py         # Travel-specific agent
+└── requirements.txt            # Python dependencies
+```
 
-### Insight Configuration
+## 🔧 Core Components
 
-Modify `all_summaries.py` to customize insight generation:
+### 1. SQL Database Agent (`sql_db_agent.py`)
+- Handles natural language to SQL conversion
+- Provides personalized financial analysis
+- Generates charts and visualizations
+- Caches customer information for performance
 
+### 2. Data Summary Generator (`all_summaries.py`)
+- Processes raw transaction data
+- Generates customer-specific summaries
+- Creates merchant and category analysis
+- Produces financial insights
+
+### 3. API Services (`api/services/app_services.py`)
+- Chat functionality with AI
+- Budget analysis tools
+- Spending analyzer
+- Raw transaction retrieval
+
+### 4. AI Agents (`api/utils/agent.py`)
+- Transaction filtering agent
+- Context-aware insight selection
+- Natural language processing
+
+## 🌐 API Endpoints
+
+### Health Check
+- `GET /health` - Application health status
+
+### Chat & Analysis
+- `POST /chat` - Main chat endpoint with AI analysis
+- `POST /chat/old` - Legacy chat endpoint
+- `GET /spends-analyzer` - Spending analysis tool
+- `GET /budget-tool` - Budget analysis tool
+- `GET /raw-transactions` - Raw transaction data
+
+### Data Retrieval
+- `GET /customer-summary/{customer_id}` - Customer summary
+- `GET /merchant-summary/{customer_id}` - Merchant analysis
+- `GET /insights/{customer_id}` - Financial insights
+
+## 💬 Usage Examples
+
+### Chat Interface
 ```python
-INSIGHT_CONFIG = {
-    'comparison_months': 6,  # Months for trend comparison
-    'recurring_months': 6,   # Months to check for recurring payments
-    'insight_types': {
-        'current': ['trend', 'anomaly', 'savings'],
-        'overall': ['recurring', 'budget_overrun', 'deep_dive']
-    },
-    'insights_expenses_only': True  # Only analyze expenses
+# Example chat request
+{
+    "customer_id": "10002",
+    "message": "What is my monthly spending on groceries?",
+    "session_id": "unique_session_id"
 }
 ```
 
-## 💬 Usage
+### Direct API Calls
+```python
+import requests
 
-### Web Interface
+# Get spending analysis
+response = requests.get(
+    "http://localhost:8000/spends-analyzer",
+    params={"customer_id": "10002"}
+)
 
-1. **Open the Application**: Navigate to `http://localhost:8000`
-2. **Enter Customer ID**: Input your customer identifier
-3. **Start Chatting**: Ask questions about your finances
-
-### Example Queries
-
-```
-"What is my total income and expenses?"
-"Show me my spending on groceries last month"
-"Which merchants do I spend the most with?"
-"What are my biggest expense categories?"
-"Show me transactions above 500 AED"
-"Compare my spending this month vs last month"
+# Get budget analysis
+response = requests.get(
+    "http://localhost:8000/budget-tool",
+    params={"customer_id": "10002"}
+)
 ```
 
-### Advanced Features
+### SQL Database Agent
+```python
+from sql_db_agent import DatabaseChain
 
-#### Raw Transaction Filtering
-- **Natural Language Queries**: "Show transactions from Starbucks in January"
-- **Complex Filters**: "Expenses above 1000 AED in the last 3 months"
-- **Date Ranges**: "Transactions between January 1st and March 31st"
+# Initialize the agent
+db_chain = DatabaseChain()
 
-#### Budget Tool
-- **Interactive Budgeting**: Create and track budget categories
-- **Spending Analysis**: Compare actual vs. budgeted amounts
-- **Recommendations**: AI-powered budget suggestions
+# Query with natural language
+result = db_chain.query(
+    question="What is my month wise spends in groceries?",
+    customer_id="10002"
+)
 
-#### Spends Analyzer
-- **Deep Dive Analysis**: Detailed category breakdowns
-- **Trend Visualization**: Spending patterns over time
-- **Merchant Insights**: Top spending locations and patterns
+# Generate chart
+chart_result = db_chain.generate_chart(
+    question="Show my spending trends",
+    customer_id="10002"
+)
+```
 
-## 🔌 API Endpoints
+## 🔍 Data Analysis Features
 
-### Core Endpoints
+### Transaction Analysis
+- Monthly spending trends
+- Category-wise breakdown
+- Merchant analysis
+- Income vs expense tracking
+- Savings rate calculation
 
-| Endpoint | Method | Description | Parameters |
-|----------|--------|-------------|------------|
-| `/` | GET | Main chat interface | - |
-| `/chat` | POST | Process chat messages | `customer_id`, `message`, `use_flattened` |
-| `/raw_transactions` | GET | Filter raw transactions | `customer_id`, `message`, `use_flattened` |
-| `/budget_tool` | GET | Budget analysis tool | `customer_id`, `use_flattened` |
-| `/spends_analyzer` | GET | Detailed spending analysis | `customer_id`, `use_flattened` |
-| `/health` | GET | Health check endpoint | - |
+### AI-Powered Insights
+- Spending pattern detection
+- Anomaly identification
+- Budget overrun alerts
+- Savings opportunities
+- Trend analysis
 
-### Request Examples
+### Visualization
+- Line charts for trends
+- Bar charts for comparisons
+- Interactive data tables
+- Exportable reports
 
-#### Chat Endpoint
+## 🛡️ Security Considerations
+
+- API keys are stored in environment variables
+- Database credentials are secured
+- CORS is configured for web access
+- Input validation on all endpoints
+- Error handling prevents data leakage
+
+## 🧪 Testing
+
+### Run the test script
 ```bash
-curl -X POST "http://localhost:8000/chat" \
-  -H "Content-Type: application/x-www-form-urlencoded" \
-  -d "customer_id=1234&message=What is my total spending?"
+python test_chat.py
 ```
 
-#### Raw Transactions
-```bash
-curl "http://localhost:8000/raw_transactions?customer_id=1234&message=groceries"
+### Test individual components
+```python
+# Test database connection
+from database import db
+result = db.run("SELECT COUNT(*) FROM raw_transactions")
+
+# Test AI agent
+from sql_db_agent import DatabaseChain
+agent = DatabaseChain()
+result = agent.query("Show my total income", "10002")
 ```
 
-### Response Format
+## 📊 Data Format
 
+### Transaction Data Schema
 ```json
 {
-  "answer": "Your total spending on groceries is 1,250 AED...",
-  "memory": "Previous conversation context...",
-  "transactions": [...],
-  "insights": [...]
+    "transaction_id": "unique_id",
+    "customer_id": "customer_identifier",
+    "merchant_name": "Merchant Name",
+    "transaction_date": "dd-mm-yyyy",
+    "transaction_month": "yyyy-mm",
+    "transaction_amount": 100.50,
+    "transaction_type": "Income|Expense",
+    "merchant_category": "Category Name",
+    "is_online": true,
+    "merchant_city": "City Name",
+    "merchant_logo": "logo_url",
+    "transaction_currency": "AED"
 }
 ```
 
-## 📊 Data Processing
-
-### Input Data Format
-
-The application expects CSV data with the following structure:
-
-```csv
-customer_id,transaction_date,transaction_type,transaction_category,merchant_name,transaction_amount,transaction_currency,transaction_mode
+### API Response Format
+```json
+{
+    "answer": "AI-generated response",
+    "data": [
+        {
+            "column1": "value1",
+            "column2": "value2"
+        }
+    ],
+    "chart": {
+        "xAxis": {
+            "type": "category",
+            "data": ["value1", "value2"]
+        },
+        "yAxis": {
+            "type": "value"
+        },
+        "series": [
+            {
+                "name": "Series Name",
+                "data": [10, 20],
+                "type": "line"
+            }
+        ]
+    }
+}
 ```
 
-### Generated Summaries
+## 🔧 Configuration
 
-1. **Customer Transaction Summaries**
-   - Total income/expenses by customer
-   - Monthly breakdowns
-   - Category-wise analysis
-   - Savings/surplus calculations
+### Environment Variables
+| Variable | Description | Required | Default |
+|----------|-------------|----------|---------|
+| `OPENAI_API_KEY` | OpenAI API key | Yes | - |
+| `MODEL` | OpenAI model to use | No | `gpt-3.5-turbo` |
+| `DB_USER` | Database username | Yes | - |
+| `DB_PASSWORD` | Database password | Yes | - |
+| `DB_HOST` | Database host | Yes | - |
+| `DB_PORT` | Database port | No | `5432` |
+| `DB_NAME` | Database name | Yes | - |
+| `DEBUG` | Debug mode | No | `False` |
+| `LOG_LEVEL` | Logging level | No | `INFO` |
 
-2. **Merchant Analysis**
-   - Top merchants by category
-   - Monthly merchant rankings
-   - Spending percentages and trends
+### Database Configuration
+The application uses PostgreSQL with the following requirements:
+- Connection pooling support
+- JSON data type support
+- Full-text search capabilities
+- Transaction support
 
-3. **Insights Summary**
-   - Trend analysis
-   - Anomaly detection
-   - Budget recommendations
-   - Actionable insights
+## 🚀 Deployment
 
-### Data Flow
+### Docker Deployment
+```dockerfile
+FROM python:3.9-slim
 
-```
-Raw CSV → Data Processing → JSON Summaries → AI Analysis → User Interface
-```
+WORKDIR /app
+COPY requirements.txt .
+RUN pip install -r requirements.txt
 
-## 🔒 Security
+COPY . .
+EXPOSE 8000
 
-### API Key Management
-
-- **Environment Variables**: API keys stored in `.env` files
-- **Git Ignore**: `.env` files excluded from version control
-- **No Hardcoding**: No API keys in source code
-- **Secure Loading**: Keys loaded at runtime only
-
-### Best Practices
-
-1. **Never commit API keys** to version control
-2. **Use environment variables** for all sensitive data
-3. **Regular key rotation** for production environments
-4. **Monitor API usage** to prevent quota exhaustion
-
-### Production Deployment
-
-```bash
-# Set production environment variables
-export OPENAI_API_KEY=your_production_key
-export DEBUG=False
-
-# Run with production server
-uvicorn main:app --host 0.0.0.0 --port 8000
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
 ```
 
-## 🐛 Troubleshooting
-
-### Common Issues
-
-#### 1. OpenAI API Connection Failed
-```
-Error: OpenAI API connection failed
-```
-**Solution**: Verify your API key in the `.env` file
-
-#### 2. Missing Summary Files
-```
-Error: Error loading summary files
-```
-**Solution**: Run `python all_summaries.py` to generate summaries
-
-#### 3. Invalid Customer ID
-```
-Error: Customer not found
-```
-**Solution**: Check that the customer ID exists in your data
-
-#### 4. Data Format Issues
-```
-Error: Invalid CSV format
-```
-**Solution**: Ensure your CSV has the required columns
-
-### Debug Mode
-
-Enable debug mode for detailed error information:
-
-```env
-DEBUG=True
-```
-
-### Logging
-
-The application provides detailed logging for troubleshooting:
-
-```python
-import logging
-logging.basicConfig(level=logging.DEBUG)
-```
+### Production Considerations
+- Use environment variables for all sensitive data
+- Set up proper logging
+- Configure database connection pooling
+- Implement rate limiting
+- Set up monitoring and alerting
+- Use HTTPS in production
+- Implement proper backup strategies
 
 ## 🤝 Contributing
 
-### Development Setup
-
-1. **Fork the repository**
-2. **Create a feature branch**
-3. **Make your changes**
-4. **Add tests** for new functionality
-5. **Submit a pull request**
-
-### Code Style
-
-- Follow PEP 8 guidelines
-- Use type hints where appropriate
-- Add docstrings to functions
-- Include error handling
-
-### Testing
-
-```bash
-# Run basic tests
-python -m pytest tests/
-
-# Test specific components
-python test_chat.py
-```
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Add tests if applicable
+5. Submit a pull request
 
 ## 📝 License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-## 🙏 Acknowledgments
-
-- **OpenAI** for providing the GPT API
-- **FastAPI** for the web framework
-- **Pandas** for data processing
-- **Community contributors** for feedback and improvements
-
-## 📞 Support
+## 🆘 Support
 
 For support and questions:
+- Check the documentation
+- Review the API endpoints
+- Test with the provided examples
+- Check the logs for error messages
 
-1. **Check the documentation** above
-2. **Review the troubleshooting section**
-3. **Open an issue** on GitHub
-4. **Contact the maintainers**
+## 🔄 Updates and Maintenance
+
+### Regular Maintenance Tasks
+- Update dependencies regularly
+- Monitor API usage and costs
+- Backup database regularly
+- Review and update security configurations
+- Monitor application performance
+
+### Version Updates
+- Check for breaking changes in dependencies
+- Test thoroughly before deployment
+- Update documentation as needed
+- Notify users of significant changes
 
 ---
 
-**Note**: This application is designed for personal finance analysis and should not be used for financial advice. Always consult with qualified financial professionals for important financial decisions. 
+**Note**: This application requires a valid OpenAI API key and properly configured PostgreSQL database to function. Make sure to set up all environment variables before running the application. 

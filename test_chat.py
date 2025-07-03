@@ -6,9 +6,9 @@ import json
 # Load environment variables
 load_dotenv('.env')
 
-# Get API key from environment variable
+# Get API key from environment variables
 api_key = os.getenv('OPENAI_API_KEY')
-print(f"API Key loaded: {api_key[:10]}...{api_key[-10:] if api_key else 'None'}")
+print(f"API Key loaded: {api_key[:10]}..." if api_key else "No API key found")
 
 if not api_key:
     raise ValueError("OPENAI_API_KEY not found in environment variables")
@@ -45,7 +45,7 @@ try:
     
     # Make the API call
     response = client.chat.completions.create(
-        model="gpt-3.5-turbo",
+        model=os.getenv("MODEL", "gpt-3.5-turbo"),
         messages=[
             {"role": "system", "content": full_context},
             {"role": "user", "content": test_message}
