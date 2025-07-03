@@ -1,0 +1,124 @@
+{
+  "1234.0": {
+    "summary": {
+      "total_income": 17295.2,
+      "total_expense": 15377.7,
+      "savings_surplus_deficit": 1917.5,
+      "total_expense_pct_of_income": 88.9,
+      "savings_pct_of_income": 11.1
+    },
+    "monthly_summary": {
+      "2025-03": {
+        "income": 10533.0,
+        "expense": 11969.5,
+        "savings_surplus_deficit": -1436.5
+      },
+      "2025-04": {
+        "income": 6762.2,
+        "expense": 3408.2,
+        "savings_surplus_deficit": 3354.0
+      }
+    },
+    "expense_details": {
+      "Entertainment": {
+        "total": 3571.1,
+        "pct_of_income": 20.6,
+        "monthly_avg": 1785.6,
+        "monthly_breakup": {
+          "2025-03": 3354.4,
+          "2025-04": 216.7
+        }
+      },
+      "Family": {
+        "total": 4151.0,
+        "pct_of_income": 24.0,
+        "monthly_avg": 2075.5,
+        "monthly_breakup": {
+          "2025-03": 4151.0,
+          "2025-04": 0.0
+        }
+      },
+      "Groceries": {
+        "total": 1707.0,
+        "pct_of_income": 9.9,
+        "monthly_avg": 853.5,
+        "monthly_breakup": {
+          "2025-03": 1351.0,
+          "2025-04": 356.0
+        }
+      },
+      "Medical": {
+        "total": 11.3,
+        "pct_of_income": 0.1,
+        "monthly_avg": 5.6,
+        "monthly_breakup": {
+          "2025-03": 11.3,
+          "2025-04": 0.0
+        }
+      },
+      "Offline Food": {
+        "total": 229.7,
+        "pct_of_income": 1.3,
+        "monthly_avg": 114.8,
+        "monthly_breakup": {
+          "2025-03": 189.1,
+          "2025-04": 40.6
+        }
+      },
+      "Online Food": {
+        "total": 70.9,
+        "pct_of_income": 0.4,
+        "monthly_avg": 35.4,
+        "monthly_breakup": {
+          "2025-03": 0.0,
+          "2025-04": 70.9
+        }
+      },
+      "Online Shopping": {
+        "total": 93.0,
+        "pct_of_income": 0.5,
+        "monthly_avg": 46.5,
+        "monthly_breakup": {
+          "2025-03": 0.0,
+          "2025-04": 93.0
+        }
+      },
+      "Others": {
+        "total": 22.0,
+        "pct_of_income": 0.1,
+        "monthly_avg": 11.0,
+        "monthly_breakup": {
+          "2025-03": 0.0,
+          "2025-04": 22.0
+        }
+      },
+      "Rent": {
+        "total": 3824.0,
+        "pct_of_income": 22.1,
+        "monthly_avg": 1912.0,
+        "monthly_breakup": {
+          "2025-03": 1912.0,
+          "2025-04": 1912.0
+        }
+      },
+      "Travel": {
+        "total": 437.7,
+        "pct_of_income": 2.5,
+        "monthly_avg": 218.8,
+        "monthly_breakup": {
+          "2025-03": 437.7,
+          "2025-04": 0.0
+        }
+      },
+      "Utility": {
+        "total": 1260.0,
+        "pct_of_income": 7.3,
+        "monthly_avg": 630.0,
+        "monthly_breakup": {
+          "2025-03": 563.0,
+          "2025-04": 697.1
+        }
+      }
+    }
+  }
+}

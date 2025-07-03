@@ -1,0 +1,414 @@
+{
+  "1234.0": {
+    "2025-03": [
+      {
+        "merchant_name": "Gurumohan & Fam Travel Tickets",
+        "category": "Family",
+        "total_spend": 3176.0,
+        "pct_of_total_monthly_spend": 26.5,
+        "rank": 1
+      },
+      {
+        "merchant_name": "Rent",
+        "category": "Rent",
+        "total_spend": 1912.0,
+        "pct_of_total_monthly_spend": 16.0,
+        "rank": 2
+      },
+      {
+        "merchant_name": "Wooly",
+        "category": "Groceries",
+        "total_spend": 1087.0,
+        "pct_of_total_monthly_spend": 9.1,
+        "rank": 3
+      },
+      {
+        "merchant_name": "Visa Charges",
+        "category": "Family",
+        "total_spend": 975.0,
+        "pct_of_total_monthly_spend": 8.1,
+        "rank": 4
+      },
+      {
+        "merchant_name": "Wilson Cruise",
+        "category": "Entertainment",
+        "total_spend": 715.0,
+        "pct_of_total_monthly_spend": 6.0,
+        "rank": 5
+      },
+      {
+        "merchant_name": "Helicopter",
+        "category": "Entertainment",
+        "total_spend": 525.0,
+        "pct_of_total_monthly_spend": 4.4,
+        "rank": 6
+      },
+      {
+        "merchant_name": "Turo Tesla",
+        "category": "Entertainment",
+        "total_spend": 418.8,
+        "pct_of_total_monthly_spend": 3.5,
+        "rank": 7
+      },
+      {
+        "merchant_name": "Turo Range Rover",
+        "category": "Entertainment",
+        "total_spend": 412.0,
+        "pct_of_total_monthly_spend": 3.4,
+        "rank": 8
+      },
+      {
+        "merchant_name": "F1",
+        "category": "Entertainment",
+        "total_spend": 381.7,
+        "pct_of_total_monthly_spend": 3.2,
+        "rank": 9
+      },
+      {
+        "merchant_name": "Bupa Keerthana",
+        "category": "Utility",
+        "total_spend": 330.2,
+        "pct_of_total_monthly_spend": 2.8,
+        "rank": 10
+      },
+      {
+        "merchant_name": "Moonlit Sanctuary",
+        "category": "Entertainment",
+        "total_spend": 330.0,
+        "pct_of_total_monthly_spend": 2.8,
+        "rank": 11
+      },
+      {
+        "merchant_name": "AirBnB",
+        "category": "Entertainment",
+        "total_spend": 290.6,
+        "pct_of_total_monthly_spend": 2.4,
+        "rank": 12
+      },
+      {
+        "merchant_name": "Bupa Vignesh",
+        "category": "Utility",
+        "total_spend": 160.5,
+        "pct_of_total_monthly_spend": 1.3,
+        "rank": 13
+      },
+      {
+        "merchant_name": "Werribee Zoo",
+        "category": "Travel",
+        "total_spend": 159.0,
+        "pct_of_total_monthly_spend": 1.3,
+        "rank": 14
+      },
+      {
+        "merchant_name": "Penguin Parade",
+        "category": "Entertainment",
+        "total_spend": 152.0,
+        "pct_of_total_monthly_spend": 1.3,
+        "rank": 15
+      },
+      {
+        "merchant_name": "Sky Deck",
+        "category": "Entertainment",
+        "total_spend": 128.3,
+        "pct_of_total_monthly_spend": 1.1,
+        "rank": 16
+      },
+      {
+        "merchant_name": "Queen victoria",
+        "category": "Groceries",
+        "total_spend": 124.1,
+        "pct_of_total_monthly_spend": 1.0,
+        "rank": 17
+      },
+      {
+        "merchant_name": "Myki",
+        "category": "Travel",
+        "total_spend": 120.0,
+        "pct_of_total_monthly_spend": 1.0,
+        "rank": 18
+      },
+      {
+        "merchant_name": "Nutrition Warehouse Protein Powder",
+        "category": "Groceries",
+        "total_spend": 117.9,
+        "pct_of_total_monthly_spend": 1.0,
+        "rank": 19
+      },
+      {
+        "merchant_name": "Uber (appa airport)",
+        "category": "Travel",
+        "total_spend": 65.7,
+        "pct_of_total_monthly_spend": 0.5,
+        "rank": 20
+      },
+      {
+        "merchant_name": "Nandos",
+        "category": "Offline Food",
+        "total_spend": 60.2,
+        "pct_of_total_monthly_spend": 0.5,
+        "rank": 21
+      },
+      {
+        "merchant_name": "Skybus",
+        "category": "Travel",
+        "total_spend": 41.2,
+        "pct_of_total_monthly_spend": 0.3,
+        "rank": 22
+      },
+      {
+        "merchant_name": "ChatGpt",
+        "category": "Utility",
+        "total_spend": 30.0,
+        "pct_of_total_monthly_spend": 0.3,
+        "rank": 23
+      },
+      {
+        "merchant_name": "Philip Island Chocolaterie",
+        "category": "Offline Food",
+        "total_spend": 29.4,
+        "pct_of_total_monthly_spend": 0.2,
+        "rank": 24
+      },
+      {
+        "merchant_name": "Didi Werribee Zoo",
+        "category": "Travel",
+        "total_spend": 27.2,
+        "pct_of_total_monthly_spend": 0.2,
+        "rank": 25
+      },
+      {
+        "merchant_name": "Dominos",
+        "category": "Offline Food",
+        "total_spend": 26.4,
+        "pct_of_total_monthly_spend": 0.2,
+        "rank": 26
+      },
+      {
+        "merchant_name": "Haircut",
+        "category": "Utility",
+        "total_spend": 25.6,
+        "pct_of_total_monthly_spend": 0.2,
+        "rank": 27
+      },
+      {
+        "merchant_name": "Uncle Tetsu",
+        "category": "Offline Food",
+        "total_spend": 25.0,
+        "pct_of_total_monthly_spend": 0.2,
+        "rank": 28
+      },
+      {
+        "merchant_name": "SkyBus(appa airport)",
+        "category": "Travel",
+        "total_spend": 24.6,
+        "pct_of_total_monthly_spend": 0.2,
+        "rank": 29
+      },
+      {
+        "merchant_name": "Spice Lab",
+        "category": "Groceries",
+        "total_spend": 22.0,
+        "pct_of_total_monthly_spend": 0.2,
+        "rank": 30
+      },
+      {
+        "merchant_name": "Lunch",
+        "category": "Offline Food",
+        "total_spend": 18.2,
+        "pct_of_total_monthly_spend": 0.2,
+        "rank": 31
+      },
+      {
+        "merchant_name": "Ice cream",
+        "category": "Offline Food",
+        "total_spend": 16.3,
+        "pct_of_total_monthly_spend": 0.1,
+        "rank": 32
+      },
+      {
+        "merchant_name": "Amaysim",
+        "category": "Utility",
+        "total_spend": 15.0,
+        "pct_of_total_monthly_spend": 0.1,
+        "rank": 33
+      },
+      {
+        "merchant_name": "Medicines",
+        "category": "Medical",
+        "total_spend": 11.3,
+        "pct_of_total_monthly_spend": 0.1,
+        "rank": 34
+      },
+      {
+        "merchant_name": "Moomba Festival",
+        "category": "Offline Food",
+        "total_spend": 8.1,
+        "pct_of_total_monthly_spend": 0.1,
+        "rank": 35
+      },
+      {
+        "merchant_name": "7eleven",
+        "category": "Offline Food",
+        "total_spend": 5.5,
+        "pct_of_total_monthly_spend": 0.0,
+        "rank": 36
+      },
+      {
+        "merchant_name": "Office works",
+        "category": "Utility",
+        "total_spend": 1.7,
+        "pct_of_total_monthly_spend": 0.0,
+        "rank": 37
+      },
+      {
+        "merchant_name": "Hubbl",
+        "category": "Entertainment",
+        "total_spend": 1.0,
+        "pct_of_total_monthly_spend": 0.0,
+        "rank": 38
+      }
+    ],
+    "2025-04": [
+      {
+        "merchant_name": "Rent",
+        "category": "Rent",
+        "total_spend": 1912.0,
+        "pct_of_total_monthly_spend": 56.1,
+        "rank": 1
+      },
+      {
+        "merchant_name": "Bupa Keerthana",
+        "category": "Utility",
+        "total_spend": 360.1,
+        "pct_of_total_monthly_spend": 10.6,
+        "rank": 2
+      },
+      {
+        "merchant_name": "Wooly",
+        "category": "Groceries",
+        "total_spend": 314.9,
+        "pct_of_total_monthly_spend": 9.2,
+        "rank": 3
+      },
+      {
+        "merchant_name": "Bupa Vignesh",
+        "category": "Utility",
+        "total_spend": 169.5,
+        "pct_of_total_monthly_spend": 5.0,
+        "rank": 4
+      },
+      {
+        "merchant_name": "Amazon",
+        "category": "Online Shopping",
+        "total_spend": 93.0,
+        "pct_of_total_monthly_spend": 2.7,
+        "rank": 5
+      },
+      {
+        "merchant_name": "Rahul StandUp",
+        "category": "Entertainment",
+        "total_spend": 87.1,
+        "pct_of_total_monthly_spend": 2.6,
+        "rank": 6
+      },
+      {
+        "merchant_name": "Sealife aquarium",
+        "category": "Entertainment",
+        "total_spend": 79.5,
+        "pct_of_total_monthly_spend": 2.3,
+        "rank": 7
+      },
+      {
+        "merchant_name": "Electricity",
+        "category": "Utility",
+        "total_spend": 69.1,
+        "pct_of_total_monthly_spend": 2.0,
+        "rank": 8
+      },
+      {
+        "merchant_name": "Hoyts",
+        "category": "Entertainment",
+        "total_spend": 50.1,
+        "pct_of_total_monthly_spend": 1.5,
+        "rank": 9
+      },
+      {
+        "merchant_name": "DoorDash",
+        "category": "Online Food",
+        "total_spend": 40.3,
+        "pct_of_total_monthly_spend": 1.2,
+        "rank": 10
+      },
+      {
+        "merchant_name": "Myki",
+        "category": "Utility",
+        "total_spend": 38.0,
+        "pct_of_total_monthly_spend": 1.1,
+        "rank": 11
+      },
+      {
+        "merchant_name": "Dominos",
+        "category": "Offline Food",
+        "total_spend": 32.5,
+        "pct_of_total_monthly_spend": 1.0,
+        "rank": 12
+      },
+      {
+        "merchant_name": "Cursor",
+        "category": "Utility",
+        "total_spend": 32.5,
+        "pct_of_total_monthly_spend": 1.0,
+        "rank": 13
+      },
+      {
+        "merchant_name": "Dominos",
+        "category": "Online Food",
+        "total_spend": 30.6,
+        "pct_of_total_monthly_spend": 0.9,
+        "rank": 14
+      },
+      {
+        "merchant_name": "Apna Desi",
+        "category": "Groceries",
+        "total_spend": 24.1,
+        "pct_of_total_monthly_spend": 0.7,
+        "rank": 15
+      },
+      {
+        "merchant_name": "Saraku",
+        "category": "Others",
+        "total_spend": 22.0,
+        "pct_of_total_monthly_spend": 0.6,
+        "rank": 16
+      },
+      {
+        "merchant_name": "Spice Lab",
+        "category": "Groceries",
+        "total_spend": 17.0,
+        "pct_of_total_monthly_spend": 0.5,
+        "rank": 17
+      },
+      {
+        "merchant_name": "amaysim",
+        "category": "Utility",
+        "total_spend": 15.0,
+        "pct_of_total_monthly_spend": 0.4,
+        "rank": 18
+      },
+      {
+        "merchant_name": "ELectricity",
+        "category": "Utility",
+        "total_spend": 12.8,
+        "pct_of_total_monthly_spend": 0.4,
+        "rank": 19
+      },
+      {
+        "merchant_name": "Ice cream",
+        "category": "Offline Food",
+        "total_spend": 8.1,
+        "pct_of_total_monthly_spend": 0.2,
+        "rank": 20
+      }
+    ]
+  }
+}

@@ -1,0 +1,182 @@
+customer_id,transaction_date,transaction_type,transaction_amount,transaction_currency,merchant_name,transaction_category,transaction_mode
+1234,01-03-2025,Income,6655.7,AED,Salary,Salary,Online
+1234,01-03-2025,Expense,128.3,AED,Sky Deck,Entertainment,Online
+1234,01-03-2025,Income,3776.2,AED,Tax Refund,Other Income,Online
+1234,01-03-2025,Expense,975,AED,Visa Charges,Family,Debit Card
+1234,02-03-2025,Expense,15,AED,Amaysim,Utility,Online
+1234,02-03-2025,Expense,27.2,AED,Didi Werribee Zoo,Travel,Online
+1234,02-03-2025,Expense,40,AED,Myki,Travel,Online
+1234,02-03-2025,Expense,159,AED,Werribee Zoo,Travel,Online
+1234,02-03-2025,Expense,19.9,AED,Wooly,Groceries,Online
+1234,03-03-2025,Transfer,2498.9,AED,INR transfer for NRE (Salary Deficit),Others,Online
+1234,03-03-2025,Expense,1912,AED,Rent,Rent,Online
+1234,04-03-2025,Expense,8.1,AED,Ice cream,Offline Food,Online
+1234,04-03-2025,Expense,11.3,AED,Medicines,Medical,Online
+1234,04-03-2025,Expense,22,AED,Spice Lab,Groceries,Online
+1234,08-03-2025,Expense,525,AED,Helicopter,Entertainment,Online
+1234,08-03-2025,Expense,8.2,AED,Ice cream,Offline Food,Debit Card
+1234,08-03-2025,Expense,412,AED,Turo Range Rover,Entertainment,Debit Card
+1234,08-03-2025,Expense,43.2,AED,Wooly,Groceries,Online
+1234,10-03-2025,Expense,8.1,AED,Moomba Festival,Offline Food,Online
+1234,10-03-2025,Expense,480,AED,Wooly,Groceries,Online
+1234,11-03-2025,Expense,330.2,AED,Bupa Keerthana,Utility,Online
+1234,12-03-2025,Expense,20,AED,Myki,Travel,Online
+1234,13-03-2025,Expense,25.6,AED,Haircut,Utility,Online
+1234,14-03-2025,Expense,381.7,AED,F1,Entertainment,Debit Card
+1234,17-03-2025,Expense,160.5,AED,Bupa Vignesh,Utility,Online
+1234,17-03-2025,Expense,3176,AED,Gurumohan & Fam Travel Tickets,Family,Online
+1234,17-03-2025,Expense,1,AED,Hubbl,Entertainment,Online
+1234,17-03-2025,Expense,25,AED,Uncle Tetsu,Offline Food,Online
+1234,18-03-2025,Expense,50,AED,Myki,Travel,Online
+1234,18-03-2025,Expense,117.9,AED,Nutrition Warehouse Protein Powder,Groceries,Online
+1234,18-03-2025,Expense,1.7,AED,Office works,Utility,Online
+1234,19-03-2025,Expense,18.2,AED,Lunch,Offline Food,Online
+1234,19-03-2025,Expense,10,AED,Myki,Travel,Online
+1234,19-03-2025,Expense,41.2,AED,Skybus,Travel,Online
+1234,22-03-2025,Expense,290.6,AED,AirBnB,Entertainment,Debit Card
+1234,22-03-2025,Expense,152,AED,Penguin Parade,Entertainment,Debit Card
+1234,22-03-2025,Expense,29.4,AED,Philip Island Chocolaterie,Offline Food,Online
+1234,22-03-2025,Expense,418.8,AED,Turo Tesla,Entertainment,Debit Card
+1234,23-03-2025,Expense,26.4,AED,Dominos,Offline Food,Debit Card
+1234,23-03-2025,Expense,330,AED,Moonlit Sanctuary,Entertainment,Debit Card
+1234,23-03-2025,Expense,715,AED,Wilson Cruise,Entertainment,Debit Card
+1234,24-03-2025,Expense,59.7,AED,Wooly,Groceries,Debit Card
+1234,24-03-2025,Expense,480,AED,Wooly,Groceries,Online
+1234,26-03-2025,Expense,4.2,AED,Wooly,Groceries,Online
+1234,30-03-2025,Expense,60.2,AED,Nandos,Offline Food,Online
+1234,30-03-2025,Expense,124.1,AED,Queen victoria,Groceries,Online
+1234,31-03-2025,Expense,5.5,AED,7eleven,Offline Food,Online
+1234,31-03-2025,Expense,30,AED,ChatGpt,Utility,Online
+1234,31-03-2025,Income,101.1,AED,Interest,Other Income,Online
+1234,31-03-2025,Expense,24.6,AED,SkyBus(appa airport),Travel,Online
+1234,31-03-2025,Expense,65.7,AED,Uber (appa airport),Travel,Online
+1234,01-04-2025,Expense,15,AED,amaysim,Utility,Online
+1234,01-04-2025,Expense,30.6,AED,Dominos,Online Food,Online
+1234,01-04-2025,Expense,40.3,AED,DoorDash,Online Food,Online
+1234,01-04-2025,Expense,69.1,AED,Electricity,Utility,Online
+1234,01-04-2025,Expense,18,AED,Myki,Utility,Online
+1234,01-04-2025,Income,6655.7,AED,Salary,Salary,Online
+1234,01-04-2025,Expense,22,AED,Saraku,Others,Online
+1234,04-04-2025,Expense,1912,AED,Rent,Rent,Online
+1234,05-04-2025,Expense,87.1,AED,Rahul StandUp,Entertainment,Debit Card
+1234,07-04-2025,Expense,6.3,AED,Wooly,Groceries,Online
+1234,08-04-2025,Expense,20,AED,Myki,Utility,Online
+1234,10-04-2025,Expense,93,AED,Amazon,Online Shopping,Online
+1234,11-04-2025,Expense,360.1,AED,Bupa Keerthana,Utility,Online
+1234,14-04-2025,Expense,32.5,AED,Dominos,Offline Food,Online
+1234,14-04-2025,Expense,1.7,AED,Wooly,Groceries,Online
+1234,15-04-2025,Expense,24.09,AED,Apna Desi,Groceries,Online
+1234,15-04-2025,Expense,169.5,AED,Bupa Vignesh,Utility,Online
+1234,15-04-2025,Expense,12.85,AED,ELectricity,Utility,Online
+1234,15-04-2025,Expense,50.1,AED,Hoyts,Entertainment,Online
+1234,15-04-2025,Expense,8.1,AED,Ice cream,Offline Food,Online
+1234,15-04-2025,Expense,16.97,AED,Spice Lab,Groceries,Online
+1234,22-04-2025,Expense,32.5,AED,Cursor,Utility,Online
+1234,22-04-2025,Expense,79.5,AED,Sealife aquarium,Entertainment,Online
+1234,22-04-2025,Expense,30.2,AED,Wooly,Groceries,Online
+1234,24-04-2025,Expense,36.7,AED,Wooly,Groceries,Online
+1234,25-04-2025,Expense,240,AED,Wooly,Groceries,Online
+1234,30-04-2025,Income,106.5,AED,Interest,Other Income,Online
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,

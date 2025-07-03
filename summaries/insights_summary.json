@@ -1,0 +1,307 @@
+{
+  "1234.0": {
+    "insights": [
+      {
+        "id": "trend_Utility_2025-04",
+        "type": "trend",
+        "category": "Utility",
+        "period": "2025-04",
+        "message": "Your spending on Utility changed by 23.8% in 2025-04 compared to the monthly average.",
+        "data": {
+          "current": 697.0500000000001,
+          "average": 563.0,
+          "change_pct": 23.8
+        },
+        "actionable": true,
+        "group": "current",
+        "narrative": "Your spending on Utility increased by 23.8% in 2025-04 compared to the monthly average, with the current spending at 697.05 AED and the average at 563.00 AED. Would you like to use our tool to budget?"
+      },
+      {
+        "id": "trend_Entertainment_2025-04",
+        "type": "trend",
+        "category": "Entertainment",
+        "period": "2025-04",
+        "message": "Your spending on Entertainment changed by -93.5% in 2025-04 compared to the monthly average.",
+        "data": {
+          "current": 216.7,
+          "average": 3354.4,
+          "change_pct": -93.5
+        },
+        "actionable": true,
+        "group": "current",
+        "narrative": "Your spending on Entertainment decreased by 93.5% in 2025-04 compared to the monthly average, with current spending at 216.7 AED and the average at 3354.4 AED. Would you like to use our tool to budget?"
+      },
+      {
+        "id": "trend_Groceries_2025-04",
+        "type": "trend",
+        "category": "Groceries",
+        "period": "2025-04",
+        "message": "Your spending on Groceries changed by -73.7% in 2025-04 compared to the monthly average.",
+        "data": {
+          "current": 355.96000000000004,
+          "average": 1351.0,
+          "change_pct": -73.7
+        },
+        "actionable": true,
+        "group": "current",
+        "narrative": "Your spending on Groceries decreased by 73.7% in 2025-04 compared to the monthly average. The current spending is AED 355.96, while the average is AED 1351.00. Would you like to use our tool to budget?"
+      },
+      {
+        "id": "trend_Offline Food_2025-04",
+        "type": "trend",
+        "category": "Offline Food",
+        "period": "2025-04",
+        "message": "Your spending on Offline Food changed by -78.5% in 2025-04 compared to the monthly average.",
+        "data": {
+          "current": 40.6,
+          "average": 189.1,
+          "change_pct": -78.5
+        },
+        "actionable": true,
+        "group": "current",
+        "narrative": "Your spending on Offline Food decreased by -78.5% in 2025-04 compared to the monthly average, with current spending at 40.6 AED and the average at 189.1 AED. Would you like to use our tool to budget?"
+      },
+      {
+        "id": "anomaly_Utility_2025-04-11 00:00:00_Bupa Keerthana",
+        "type": "anomaly",
+        "category": "Utility",
+        "period": "2025-04",
+        "message": "Unusually high expense of 360.1 AED at Bupa Keerthana in Utility on 2025-04-11",
+        "data": {
+          "amount": 360.1,
+          "mean": 87.13125000000001,
+          "std": 122.2483448251959
+        },
+        "actionable": true,
+        "group": "current",
+        "narrative": "An expense of 360.1 AED was recorded at Bupa Keerthana in Utility on 2025-04-11. This amount is significantly higher than the average expense in this category, which is 87.13 AED, with a standard deviation of 122.25 AED. Would you like to use our tool to budget?"
+      },
+      {
+        "id": "anomaly_Groceries_2025-04-25 00:00:00_Wooly",
+        "type": "anomaly",
+        "category": "Groceries",
+        "period": "2025-04",
+        "message": "Unusually high expense of 240.0 AED at Wooly in Groceries on 2025-04-25",
+        "data": {
+          "amount": 240.0,
+          "mean": 50.85142857142858,
+          "std": 84.32945757139503
+        },
+        "actionable": true,
+        "group": "current",
+        "narrative": "An expense of 240.0 AED at Wooly in Groceries on 2025-04-25 stands out as unusually high compared to the average expense of 50.85 AED with a standard deviation of 84.33 AED. Would you like to use our tool to budget?"
+      },
+      {
+        "id": "savings_Entertainment_2025-04",
+        "type": "savings",
+        "category": "Entertainment",
+        "period": "2025-04",
+        "message": "You spent 93.5% less on Entertainment in 2025-04 compared to the monthly average.",
+        "data": {
+          "current": 216.7,
+          "average": 3354.4,
+          "change_pct": -93.5
+        },
+        "actionable": true,
+        "group": "current",
+        "narrative": "You spent 93.5% less on Entertainment in 2025-04 compared to the monthly average. The current spend was 216.7 AED, significantly lower than the average of 3354.4 AED. Would you like to deep dive into your expenses?"
+      },
+      {
+        "id": "savings_Groceries_2025-04",
+        "type": "savings",
+        "category": "Groceries",
+        "period": "2025-04",
+        "message": "You spent 73.7% less on Groceries in 2025-04 compared to the monthly average.",
+        "data": {
+          "current": 355.94,
+          "average": 1351.0,
+          "change_pct": -73.7
+        },
+        "actionable": true,
+        "group": "current",
+        "narrative": "You spent AED 355.96 on Groceries in 2025-04, which is 73.7% less than the monthly average of AED 1351.00. Would you like to deep dive into your expenses?"
+      },
+      {
+        "id": "savings_Offline Food_2025-04",
+        "type": "savings",
+        "category": "Offline Food",
+        "period": "2025-04",
+        "message": "You spent 78.5% less on Offline Food in 2025-04 compared to the monthly average.",
+        "data": {
+          "current": 40.6,
+          "average": 189.1,
+          "change_pct": -78.5
+        },
+        "actionable": true,
+        "group": "current",
+        "narrative": "You spent 40.6 AED on Offline Food in 2025-04, which is 78.5% less than the monthly average spending of 189.1 AED. Would you like to deep dive into your expenses?"
+      },
+      {
+        "id": "recurring_Myki",
+        "type": "recurring",
+        "merchant": "Myki",
+        "periods": [
+          "2025-03",
+          "2025-04"
+        ],
+        "message": "Recurring payments to Myki in 2025-03, 2025-04.",
+        "data": {
+          "months": [
+            "2025-03",
+            "2025-04"
+          ]
+        },
+        "actionable": false,
+        "group": "overall",
+        "narrative": "Recurring payments were made to Myki in March 2025 and April 2025."
+      },
+      {
+        "id": "recurring_Wooly",
+        "type": "recurring",
+        "merchant": "Wooly",
+        "periods": [
+          "2025-03",
+          "2025-04"
+        ],
+        "message": "Recurring payments to Wooly in 2025-03, 2025-04.",
+        "data": {
+          "months": [
+            "2025-03",
+            "2025-04"
+          ]
+        },
+        "actionable": false,
+        "group": "overall",
+        "narrative": "Recurring payments to Wooly in March 2025 and April 2025."
+      },
+      {
+        "id": "recurring_Rent",
+        "type": "recurring",
+        "merchant": "Rent",
+        "periods": [
+          "2025-03",
+          "2025-04"
+        ],
+        "message": "Recurring payments to Rent in 2025-03, 2025-04.",
+        "data": {
+          "months": [
+            "2025-03",
+            "2025-04"
+          ]
+        },
+        "actionable": false,
+        "group": "overall",
+        "narrative": "Recurring payments to Rent are scheduled for March 2025 and April 2025."
+      },
+      {
+        "id": "recurring_Ice cream",
+        "type": "recurring",
+        "merchant": "Ice cream",
+        "periods": [
+          "2025-03",
+          "2025-04"
+        ],
+        "message": "Recurring payments to Ice cream in 2025-03, 2025-04.",
+        "data": {
+          "months": [
+            "2025-03",
+            "2025-04"
+          ]
+        },
+        "actionable": false,
+        "group": "overall",
+        "narrative": "Recurring payments were made to Ice cream in March 2025 and April 2025."
+      },
+      {
+        "id": "recurring_Spice Lab",
+        "type": "recurring",
+        "merchant": "Spice Lab",
+        "periods": [
+          "2025-03",
+          "2025-04"
+        ],
+        "message": "Recurring payments to Spice Lab in 2025-03, 2025-04.",
+        "data": {
+          "months": [
+            "2025-03",
+            "2025-04"
+          ]
+        },
+        "actionable": false,
+        "group": "overall",
+        "narrative": "Recurring payments to Spice Lab were made in March 2025 and April 2025."
+      },
+      {
+        "id": "recurring_Bupa Keerthana",
+        "type": "recurring",
+        "merchant": "Bupa Keerthana",
+        "periods": [
+          "2025-03",
+          "2025-04"
+        ],
+        "message": "Recurring payments to Bupa Keerthana in 2025-03, 2025-04.",
+        "data": {
+          "months": [
+            "2025-03",
+            "2025-04"
+          ]
+        },
+        "actionable": false,
+        "group": "overall",
+        "narrative": "Recurring payments to Bupa Keerthana were made in March 2025 and April 2025."
+      },
+      {
+        "id": "recurring_Bupa Vignesh",
+        "type": "recurring",
+        "merchant": "Bupa Vignesh",
+        "periods": [
+          "2025-03",
+          "2025-04"
+        ],
+        "message": "Recurring payments to Bupa Vignesh in 2025-03, 2025-04.",
+        "data": {
+          "months": [
+            "2025-03",
+            "2025-04"
+          ]
+        },
+        "actionable": false,
+        "group": "overall",
+        "narrative": "Recurring payments to Bupa Vignesh were detected in March 2025 and April 2025."
+      },
+      {
+        "id": "recurring_Dominos",
+        "type": "recurring",
+        "merchant": "Dominos",
+        "periods": [
+          "2025-03",
+          "2025-04"
+        ],
+        "message": "Recurring payments to Dominos in 2025-03, 2025-04.",
+        "data": {
+          "months": [
+            "2025-03",
+            "2025-04"
+          ]
+        },
+        "actionable": false,
+        "group": "overall",
+        "narrative": "Recurring payments to Dominos were made in AED for the months of March 2025 and April 2025."
+      },
+      {
+        "id": "deepdive_2025-04_Rent",
+        "type": "category_deepdive",
+        "category": "Rent",
+        "period": "2025-04",
+        "message": "Your largest expense category in 2025-04 was Rent (1912.0 AED).",
+        "data": {
+          "amount": 1912.0
+        },
+        "actionable": true,
+        "group": "overall",
+        "narrative": "In 2025-04, your largest expense category was Rent, totaling 1912.0 AED. Would you like to deep dive into your expenses?"
+      }
+    ],
+    "overall_narrative": "Your spending on Utility increased by 23.8% in April 2025 compared to the monthly average, with current spending at 697.05 AED. Conversely, your Entertainment spending decreased significantly by 93.5%, with current spending at 216.7 AED. Moreover, your Groceries spending decreased by 73.7% to 355.96 AED, and Offline Food spending decreased by 78.5% to 40.6 AED in April. Additionally, notable expenses include 360.1 AED at Bupa Keerthana in"
+  }
+}

@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Finance Chatbot</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; background: #f7f7f7; }
+        #chatbox { width: 100%; height: 300px; border: 1px solid #ccc; background: #fff; padding: 10px; overflow-y: auto; margin-bottom: 10px; }
+        #user-input { width: 80%; padding: 8px; }
+        #customer-id { width: 120px; padding: 8px; }
+        #send-btn { padding: 8px 16px; }
+        .msg-user { color: #333; margin: 8px 0; }
+        .msg-bot { color: #0074d9; margin: 8px 0; }
+        #memorybox { width: 100%; height: 80px; border: 1px solid #aaa; background: #f0f0f0; margin-top: 10px; padding: 6px; font-size: 13px; color: #444; }
+        #raw-btn { display: none; margin-top: 10px; padding: 8px 16px; }
+        #raw-table { margin-top: 10px; background: #fff; border: 1px solid #ccc; padding: 10px; }
+        .error { color: #dc3545; }
+        .loading { color: #666; font-style: italic; }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    <h2>Finance Chatbot</h2>
+    <label for="customer-id">Customer ID:</label>
+    <input type="text" id="customer-id" placeholder="Enter customer ID" />
+    <div id="chatbox"></div>
+    <input type="text" id="user-input" placeholder="Type your message..." />
+    <button id="send-btn">Send</button>
+    <div>
+        <label for="memorybox"><b>Conversation Memory (temporary):</b></label>
+        <textarea id="memorybox" readonly></textarea>
+    </div>
+    <button id="raw-btn">Show Raw Transactions</button>
+    <button id="budget-btn">Show Budget Tool</button>
+    <button id="spends-btn">Show Spends Analyzer</button>
+    <div id="raw-table"></div>
+    <div id="budget-table"></div>
+    <div id="spends-table"></div>
+    <script>
+        const chatbox = document.getElementById('chatbox');
+        const userInput = document.getElementById('user-input');
+        const sendBtn = document.getElementById('send-btn');
+        const customerIdInput = document.getElementById('customer-id');
+        const memoryBox = document.getElementById('memorybox');
+        const rawBtn = document.getElementById('raw-btn');
+        const budgetBtn = document.getElementById('budget-btn');
+        const spendsBtn = document.getElementById('spends-btn');
+        const rawTable = document.getElementById('raw-table');
+        const budgetTable = document.getElementById('budget-table');
+        const spendsTable = document.getElementById('spends-table');
+
+        let lastTransactionQuery = '';
+        let isProcessing = false;
+
+        function appendMessage(text, sender, isError = false) {
+            const msg = document.createElement('div');
+            msg.className = sender === 'user' ? 'msg-user' : 'msg-bot';
+            if (isError) {
+                msg.className += ' error';
+            }
+            if (sender === 'bot') {
+                msg.innerHTML = 'Bot: ' + marked.parse(text);
+            } else {
+                msg.textContent = 'You: ' + text;
+                // Store the last user query for raw transactions
+                lastTransactionQuery = text;
+            }
+            chatbox.appendChild(msg);
+            chatbox.scrollTop = chatbox.scrollHeight;
+        }
+
+        function showButtonsIfNeeded(botText) {
+            // Show/hide raw transactions button
+            if (/fetch.*transactions|show.*transactions|see.*transactions|display.*transactions|list.*transactions|click.*raw.*transactions/i.test(botText)) {
+                rawBtn.style.display = 'inline-block';
+            } else {
+                rawBtn.style.display = 'none';
+            }
+
+            // Show/hide budget tool button
+            if (/would you like to use our tool to budget|use our tool to budget|show budget tool|budget tool|click.*budget|use.*budget/i.test(botText)) {
+                budgetBtn.style.display = 'inline-block';
+            } else {
+                budgetBtn.style.display = 'none';
+            }
+
+            // Show/hide spends analyzer button
+            if (/would you like to deep dive into your expenses|deep dive into your expenses|show spends analyzer|spends analyzer|click.*spends|analyze.*spends|deep.*dive/i.test(botText)) {
+                spendsBtn.style.display = 'inline-block';
+            } else {
+                spendsBtn.style.display = 'none';
+            }
+        }
+
+        async function sendMessage() {
+            const message = userInput.value.trim();
+            const customerId = customerIdInput.value.trim();
+            
+            if (!message || !customerId) {
+                appendMessage('Please enter both a customer ID and a message.', 'bot', true);
+                return;
+            }
+
+            isProcessing = true;
+            sendBtn.disabled = true;
+            
+            appendMessage(message, 'user');
+            userInput.value = '';
+            appendMessage('Processing your request...', 'bot');
+            
+            // Hide all buttons initially
+            rawBtn.style.display = 'none';
+            budgetBtn.style.display = 'none';
+            spendsBtn.style.display = 'none';
+            rawTable.innerHTML = '';
+            
+            try {
+                const response = await fetch('/chat', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                    },
+                    body: `customer_id=${customerId}&message=${encodeURIComponent(message)}`
+                });
+
+                const data = await response.json();
+                
+                if (response.ok) {
+                    // Debug logging for memory data
+                    console.log('Server response data:', data);
+                    console.log('Memory data received:', data.memory);
+                    
+                    // Add bot response to chat
+                    appendMessage(data.answer, 'bot');
+                    
+                    // Check for button triggers in the response
+                    showButtonsIfNeeded(data.answer);
+
+                    // Update memory box if memory data is present
+                    if (data.memory && data.memory.trim() !== '') {
+                        console.log('Updating memory box with:', data.memory);
+                        memoryBox.value = data.memory;
+                        memoryBox.style.display = 'block';  // Make sure memory box is visible
+                    } else {
+                        console.log('No memory data received from server');
+                        memoryBox.style.display = 'none';  // Hide memory box if no memory
+                    }
+                } else {
+                    appendMessage(`Error: ${data.error}`, 'bot', true);
+                }
+            } catch (error) {
+                appendMessage(`Error: ${error.message}`, 'bot', true);
+            } finally {
+                isProcessing = false;
+                sendBtn.disabled = false;
+            }
+        }
+
+        async function showRawTransactions(customerId, message) {
+            if (isProcessing) {
+                console.log('Already processing a request');
+                return;
+            }
+
+            isProcessing = true;
+            rawBtn.disabled = true;
+            
+            rawBtn.style.display = 'none';
+            rawTable.innerHTML = '<div class="loading">Loading transactions...</div>';
+            
+            const params = new URLSearchParams({ customer_id: customerId, message: message }).toString();
+            
+            try {
+                console.log('Fetching raw transactions with params:', params);
+                const resp = await fetch('/raw_transactions?' + params);
+                const data = await resp.json();
+                console.log('Raw transactions response:', data);
+
+                if (!data.transactions || data.transactions.length === 0) {
+                    rawTable.innerHTML = '<i>No transactions found for your query.</i>';
+                    return;
+                }
+
+                let md = '| Date | Type | Amount | Currency | Merchant | Category | Mode |\n|---|---|---|---|---|---|---|\n';
+                for (const t of data.transactions) {
+                    md += `| ${t.transaction_date} | ${t.transaction_type} | ${t.transaction_amount} | ${t.transaction_currency} | ${t.merchant_name} | ${t.transaction_category} | ${t.transaction_mode} |\n`;
+                }
+                rawTable.innerHTML = marked.parse(md);
+            } catch (error) {
+                console.error('Raw transactions error:', error);
+                rawTable.innerHTML = `<div class="error">Error loading transactions: ${error.message}</div>`;
+            } finally {
+                isProcessing = false;
+                rawBtn.disabled = false;
+            }
+        }
+
+        async function showBudgetTool() {
+            if (isProcessing) {
+                console.log('Already processing a request');
+                return;
+            }
+
+            isProcessing = true;
+            budgetBtn.disabled = true;
+            
+            budgetBtn.style.display = 'none';
+            budgetTable.innerHTML = '<div class="loading">Loading budget data...</div>';
+            
+            const customerId = customerIdInput.value.trim();
+            
+            try {
+                console.log('Fetching budget data for customer:', customerId);
+                const response = await fetch(`/budget_tool?customer_id=${customerId}&use_flattened=true`);
+                const data = await response.json();
+                console.log('Budget data response:', data);
+
+                if (!data.budget) {
+                    budgetTable.innerHTML = '<i>No budget data found.</i>';
+                    return;
+                }
+
+                budgetTable.innerHTML = marked.parse(data.budget);
+            } catch (error) {
+                console.error('Budget tool error:', error);
+                budgetTable.innerHTML = `<div class="error">Error loading budget data: ${error.message}</div>`;
+            } finally {
+                isProcessing = false;
+                budgetBtn.disabled = false;
+            }
+        }
+
+        async function showSpendsAnalyzer() {
+            if (isProcessing) {
+                console.log('Already processing a request');
+                return;
+            }
+
+            isProcessing = true;
+            spendsBtn.disabled = true;
+            
+            spendsBtn.style.display = 'none';
+            spendsTable.innerHTML = '<div class="loading">Loading spends analysis...</div>';
+            
+            const customerId = customerIdInput.value.trim();
+            
+            try {
+                console.log('Fetching spends analysis for customer:', customerId);
+                const response = await fetch(`/spends_analyzer?customer_id=${customerId}&use_flattened=true`);
+                const data = await response.json();
+                console.log('Spends analysis response:', data);
+
+                if (!data.analysis) {
+                    spendsTable.innerHTML = '<i>No spends analysis found.</i>';
+                    return;
+                }
+
+                spendsTable.innerHTML = marked.parse(data.analysis);
+            } catch (error) {
+                console.error('Spends analyzer error:', error);
+                spendsTable.innerHTML = `<div class="error">Error loading spends analysis: ${error.message}</div>`;
+            } finally {
+                isProcessing = false;
+                spendsBtn.disabled = false;
+            }
+        }
+
+        sendBtn.onclick = sendMessage;
+
+        rawBtn.onclick = async function() {
+            if (isProcessing) {
+                console.log('Already processing a request');
+                return;
+            }
+
+            isProcessing = true;
+            rawBtn.disabled = true;
+            
+            rawBtn.style.display = 'none';
+            rawTable.innerHTML = '<div class="loading">Loading transactions...</div>';
+            
+            const customerId = customerIdInput.value.trim();
+            const params = new URLSearchParams({ customer_id: customerId, message: lastTransactionQuery }).toString();
+            
+            try {
+                console.log('Fetching raw transactions with params:', params);
+                const resp = await fetch('/raw_transactions?' + params);
+                const data = await resp.json();
+                console.log('Raw transactions response:', data);
+
+                if (!data.transactions || data.transactions.length === 0) {
+                    rawTable.innerHTML = '<i>No transactions found for your query.</i>';
+                    return;
+                }
+
+                let md = '| Date | Type | Amount | Currency | Merchant | Category | Mode |\n|---|---|---|---|---|---|---|\n';
+                for (const t of data.transactions) {
+                    md += `| ${t.transaction_date} | ${t.transaction_type} | ${t.transaction_amount} | ${t.transaction_currency} | ${t.merchant_name} | ${t.transaction_category} | ${t.transaction_mode} |\n`;
+                }
+                rawTable.innerHTML = marked.parse(md);
+            } catch (error) {
+                console.error('Raw transactions error:', error);
+                rawTable.innerHTML = `<div class="error">Error loading transactions: ${error.message}</div>`;
+            } finally {
+                isProcessing = false;
+                rawBtn.disabled = false;
+            }
+        };
+
+        budgetBtn.onclick = showBudgetTool;
+        spendsBtn.onclick = showSpendsAnalyzer;
+
+        userInput.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' && !isProcessing) {
+                sendBtn.onclick();
+            }
+        });
+    </script>
+</body>
+</html> 

@@ -1,0 +1,638 @@
+{
+  "1234.0": {
+    "Entertainment": [
+      {
+        "merchant_name": "Wilson Cruise",
+        "total_spend": 715.0,
+        "pct_of_total_spends": 4.6,
+        "pct_of_category_spends": 20.0,
+        "monthly_spend": {
+          "2025-03": 715.0,
+          "2025-04": 0.0
+        },
+        "avg_monthly_spend": 357.5,
+        "rank": 1
+      },
+      {
+        "merchant_name": "Helicopter",
+        "total_spend": 525.0,
+        "pct_of_total_spends": 3.4,
+        "pct_of_category_spends": 14.7,
+        "monthly_spend": {
+          "2025-03": 525.0,
+          "2025-04": 0.0
+        },
+        "avg_monthly_spend": 262.5,
+        "rank": 2
+      },
+      {
+        "merchant_name": "Turo Tesla",
+        "total_spend": 418.8,
+        "pct_of_total_spends": 2.7,
+        "pct_of_category_spends": 11.7,
+        "monthly_spend": {
+          "2025-03": 418.8,
+          "2025-04": 0.0
+        },
+        "avg_monthly_spend": 209.4,
+        "rank": 3
+      },
+      {
+        "merchant_name": "Turo Range Rover",
+        "total_spend": 412.0,
+        "pct_of_total_spends": 2.7,
+        "pct_of_category_spends": 11.5,
+        "monthly_spend": {
+          "2025-03": 412.0,
+          "2025-04": 0.0
+        },
+        "avg_monthly_spend": 206.0,
+        "rank": 4
+      },
+      {
+        "merchant_name": "F1",
+        "total_spend": 381.7,
+        "pct_of_total_spends": 2.5,
+        "pct_of_category_spends": 10.7,
+        "monthly_spend": {
+          "2025-03": 381.7,
+          "2025-04": 0.0
+        },
+        "avg_monthly_spend": 190.8,
+        "rank": 5
+      },
+      {
+        "merchant_name": "Moonlit Sanctuary",
+        "total_spend": 330.0,
+        "pct_of_total_spends": 2.1,
+        "pct_of_category_spends": 9.2,
+        "monthly_spend": {
+          "2025-03": 330.0,
+          "2025-04": 0.0
+        },
+        "avg_monthly_spend": 165.0,
+        "rank": 6
+      },
+      {
+        "merchant_name": "AirBnB",
+        "total_spend": 290.6,
+        "pct_of_total_spends": 1.9,
+        "pct_of_category_spends": 8.1,
+        "monthly_spend": {
+          "2025-03": 290.6,
+          "2025-04": 0.0
+        },
+        "avg_monthly_spend": 145.3,
+        "rank": 7
+      },
+      {
+        "merchant_name": "Penguin Parade",
+        "total_spend": 152.0,
+        "pct_of_total_spends": 1.0,
+        "pct_of_category_spends": 4.3,
+        "monthly_spend": {
+          "2025-03": 152.0,
+          "2025-04": 0.0
+        },
+        "avg_monthly_spend": 76.0,
+        "rank": 8
+      },
+      {
+        "merchant_name": "Sky Deck",
+        "total_spend": 128.3,
+        "pct_of_total_spends": 0.8,
+        "pct_of_category_spends": 3.6,
+        "monthly_spend": {
+          "2025-03": 128.3,
+          "2025-04": 0.0
+        },
+        "avg_monthly_spend": 64.2,
+        "rank": 9
+      },
+      {
+        "merchant_name": "Rahul StandUp",
+        "total_spend": 87.1,
+        "pct_of_total_spends": 0.6,
+        "pct_of_category_spends": 2.4,
+        "monthly_spend": {
+          "2025-03": 0.0,
+          "2025-04": 87.1
+        },
+        "avg_monthly_spend": 43.6,
+        "rank": 10
+      },
+      {
+        "merchant_name": "Sealife aquarium",
+        "total_spend": 79.5,
+        "pct_of_total_spends": 0.5,
+        "pct_of_category_spends": 2.2,
+        "monthly_spend": {
+          "2025-03": 0.0,
+          "2025-04": 79.5
+        },
+        "avg_monthly_spend": 39.8,
+        "rank": 11
+      },
+      {
+        "merchant_name": "Hoyts",
+        "total_spend": 50.1,
+        "pct_of_total_spends": 0.3,
+        "pct_of_category_spends": 1.4,
+        "monthly_spend": {
+          "2025-03": 0.0,
+          "2025-04": 50.1
+        },
+        "avg_monthly_spend": 25.0,
+        "rank": 12
+      },
+      {
+        "merchant_name": "Hubbl",
+        "total_spend": 1.0,
+        "pct_of_total_spends": 0.0,
+        "pct_of_category_spends": 0.0,
+        "monthly_spend": {
+          "2025-03": 1.0,
+          "2025-04": 0.0
+        },
+        "avg_monthly_spend": 0.5,
+        "rank": 13
+      }
+    ],
+    "Family": [
+      {
+        "merchant_name": "Gurumohan & Fam Travel Tickets",
+        "total_spend": 3176.0,
+        "pct_of_total_spends": 20.7,
+        "pct_of_category_spends": 76.5,
+        "monthly_spend": {
+          "2025-03": 3176.0,
+          "2025-04": 0.0
+        },
+        "avg_monthly_spend": 1588.0,
+        "rank": 1
+      },
+      {
+        "merchant_name": "Visa Charges",
+        "total_spend": 975.0,
+        "pct_of_total_spends": 6.3,
+        "pct_of_category_spends": 23.5,
+        "monthly_spend": {
+          "2025-03": 975.0,
+          "2025-04": 0.0
+        },
+        "avg_monthly_spend": 487.5,
+        "rank": 2
+      }
+    ],
+    "Groceries": [
+      {
+        "merchant_name": "Wooly",
+        "total_spend": 1401.9,
+        "pct_of_total_spends": 9.1,
+        "pct_of_category_spends": 82.1,
+        "monthly_spend": {
+          "2025-03": 1087.0,
+          "2025-04": 314.9
+        },
+        "avg_monthly_spend": 701.0,
+        "rank": 1
+      },
+      {
+        "merchant_name": "Queen victoria",
+        "total_spend": 124.1,
+        "pct_of_total_spends": 0.8,
+        "pct_of_category_spends": 7.3,
+        "monthly_spend": {
+          "2025-03": 124.1,
+          "2025-04": 0.0
+        },
+        "avg_monthly_spend": 62.0,
+        "rank": 2
+      },
+      {
+        "merchant_name": "Nutrition Warehouse Protein Powder",
+        "total_spend": 117.9,
+        "pct_of_total_spends": 0.8,
+        "pct_of_category_spends": 6.9,
+        "monthly_spend": {
+          "2025-03": 117.9,
+          "2025-04": 0.0
+        },
+        "avg_monthly_spend": 59.0,
+        "rank": 3
+      },
+      {
+        "merchant_name": "Spice Lab",
+        "total_spend": 39.0,
+        "pct_of_total_spends": 0.3,
+        "pct_of_category_spends": 2.3,
+        "monthly_spend": {
+          "2025-03": 22.0,
+          "2025-04": 17.0
+        },
+        "avg_monthly_spend": 19.5,
+        "rank": 4
+      },
+      {
+        "merchant_name": "Apna Desi",
+        "total_spend": 24.1,
+        "pct_of_total_spends": 0.2,
+        "pct_of_category_spends": 1.4,
+        "monthly_spend": {
+          "2025-03": 0.0,
+          "2025-04": 24.1
+        },
+        "avg_monthly_spend": 12.0,
+        "rank": 5
+      }
+    ],
+    "Medical": [
+      {
+        "merchant_name": "Medicines",
+        "total_spend": 11.3,
+        "pct_of_total_spends": 0.1,
+        "pct_of_category_spends": 100.0,
+        "monthly_spend": {
+          "2025-03": 11.3,
+          "2025-04": 0.0
+        },
+        "avg_monthly_spend": 5.6,
+        "rank": 1
+      }
+    ],
+    "Offline Food": [
+      {
+        "merchant_name": "Nandos",
+        "total_spend": 60.2,
+        "pct_of_total_spends": 0.4,
+        "pct_of_category_spends": 26.2,
+        "monthly_spend": {
+          "2025-03": 60.2,
+          "2025-04": 0.0
+        },
+        "avg_monthly_spend": 30.1,
+        "rank": 1
+      },
+      {
+        "merchant_name": "Dominos",
+        "total_spend": 58.9,
+        "pct_of_total_spends": 0.4,
+        "pct_of_category_spends": 25.6,
+        "monthly_spend": {
+          "2025-03": 26.4,
+          "2025-04": 32.5
+        },
+        "avg_monthly_spend": 29.4,
+        "rank": 2
+      },
+      {
+        "merchant_name": "Philip Island Chocolaterie",
+        "total_spend": 29.4,
+        "pct_of_total_spends": 0.2,
+        "pct_of_category_spends": 12.8,
+        "monthly_spend": {
+          "2025-03": 29.4,
+          "2025-04": 0.0
+        },
+        "avg_monthly_spend": 14.7,
+        "rank": 3
+      },
+      {
+        "merchant_name": "Uncle Tetsu",
+        "total_spend": 25.0,
+        "pct_of_total_spends": 0.2,
+        "pct_of_category_spends": 10.9,
+        "monthly_spend": {
+          "2025-03": 25.0,
+          "2025-04": 0.0
+        },
+        "avg_monthly_spend": 12.5,
+        "rank": 4
+      },
+      {
+        "merchant_name": "Ice cream",
+        "total_spend": 24.4,
+        "pct_of_total_spends": 0.2,
+        "pct_of_category_spends": 10.6,
+        "monthly_spend": {
+          "2025-03": 16.3,
+          "2025-04": 8.1
+        },
+        "avg_monthly_spend": 12.2,
+        "rank": 5
+      },
+      {
+        "merchant_name": "Lunch",
+        "total_spend": 18.2,
+        "pct_of_total_spends": 0.1,
+        "pct_of_category_spends": 7.9,
+        "monthly_spend": {
+          "2025-03": 18.2,
+          "2025-04": 0.0
+        },
+        "avg_monthly_spend": 9.1,
+        "rank": 6
+      },
+      {
+        "merchant_name": "Moomba Festival",
+        "total_spend": 8.1,
+        "pct_of_total_spends": 0.1,
+        "pct_of_category_spends": 3.5,
+        "monthly_spend": {
+          "2025-03": 8.1,
+          "2025-04": 0.0
+        },
+        "avg_monthly_spend": 4.0,
+        "rank": 7
+      },
+      {
+        "merchant_name": "7eleven",
+        "total_spend": 5.5,
+        "pct_of_total_spends": 0.0,
+        "pct_of_category_spends": 2.4,
+        "monthly_spend": {
+          "2025-03": 5.5,
+          "2025-04": 0.0
+        },
+        "avg_monthly_spend": 2.8,
+        "rank": 8
+      }
+    ],
+    "Online Food": [
+      {
+        "merchant_name": "DoorDash",
+        "total_spend": 40.3,
+        "pct_of_total_spends": 0.3,
+        "pct_of_category_spends": 56.8,
+        "monthly_spend": {
+          "2025-03": 0.0,
+          "2025-04": 40.3
+        },
+        "avg_monthly_spend": 20.2,
+        "rank": 1
+      },
+      {
+        "merchant_name": "Dominos",
+        "total_spend": 30.6,
+        "pct_of_total_spends": 0.2,
+        "pct_of_category_spends": 43.2,
+        "monthly_spend": {
+          "2025-03": 0.0,
+          "2025-04": 30.6
+        },
+        "avg_monthly_spend": 15.3,
+        "rank": 2
+      }
+    ],
+    "Online Shopping": [
+      {
+        "merchant_name": "Amazon",
+        "total_spend": 93.0,
+        "pct_of_total_spends": 0.6,
+        "pct_of_category_spends": 100.0,
+        "monthly_spend": {
+          "2025-03": 0.0,
+          "2025-04": 93.0
+        },
+        "avg_monthly_spend": 46.5,
+        "rank": 1
+      }
+    ],
+    "Others": [
+      {
+        "merchant_name": "Saraku",
+        "total_spend": 22.0,
+        "pct_of_total_spends": 0.1,
+        "pct_of_category_spends": 100.0,
+        "monthly_spend": {
+          "2025-03": 0.0,
+          "2025-04": 22.0
+        },
+        "avg_monthly_spend": 11.0,
+        "rank": 1
+      }
+    ],
+    "Rent": [
+      {
+        "merchant_name": "Rent",
+        "total_spend": 3824.0,
+        "pct_of_total_spends": 24.9,
+        "pct_of_category_spends": 100.0,
+        "monthly_spend": {
+          "2025-03": 1912.0,
+          "2025-04": 1912.0
+        },
+        "avg_monthly_spend": 1912.0,
+        "rank": 1
+      }
+    ],
+    "Travel": [
+      {
+        "merchant_name": "Werribee Zoo",
+        "total_spend": 159.0,
+        "pct_of_total_spends": 1.0,
+        "pct_of_category_spends": 36.3,
+        "monthly_spend": {
+          "2025-03": 159.0,
+          "2025-04": 0.0
+        },
+        "avg_monthly_spend": 79.5,
+        "rank": 1
+      },
+      {
+        "merchant_name": "Myki",
+        "total_spend": 120.0,
+        "pct_of_total_spends": 0.8,
+        "pct_of_category_spends": 27.4,
+        "monthly_spend": {
+          "2025-03": 120.0,
+          "2025-04": 0.0
+        },
+        "avg_monthly_spend": 60.0,
+        "rank": 2
+      },
+      {
+        "merchant_name": "Uber (appa airport)",
+        "total_spend": 65.7,
+        "pct_of_total_spends": 0.4,
+        "pct_of_category_spends": 15.0,
+        "monthly_spend": {
+          "2025-03": 65.7,
+          "2025-04": 0.0
+        },
+        "avg_monthly_spend": 32.8,
+        "rank": 3
+      },
+      {
+        "merchant_name": "Skybus",
+        "total_spend": 41.2,
+        "pct_of_total_spends": 0.3,
+        "pct_of_category_spends": 9.4,
+        "monthly_spend": {
+          "2025-03": 41.2,
+          "2025-04": 0.0
+        },
+        "avg_monthly_spend": 20.6,
+        "rank": 4
+      },
+      {
+        "merchant_name": "Didi Werribee Zoo",
+        "total_spend": 27.2,
+        "pct_of_total_spends": 0.2,
+        "pct_of_category_spends": 6.2,
+        "monthly_spend": {
+          "2025-03": 27.2,
+          "2025-04": 0.0
+        },
+        "avg_monthly_spend": 13.6,
+        "rank": 5
+      },
+      {
+        "merchant_name": "SkyBus(appa airport)",
+        "total_spend": 24.6,
+        "pct_of_total_spends": 0.2,
+        "pct_of_category_spends": 5.6,
+        "monthly_spend": {
+          "2025-03": 24.6,
+          "2025-04": 0.0
+        },
+        "avg_monthly_spend": 12.3,
+        "rank": 6
+      }
+    ],
+    "Utility": [
+      {
+        "merchant_name": "Bupa Keerthana",
+        "total_spend": 690.3,
+        "pct_of_total_spends": 4.5,
+        "pct_of_category_spends": 54.8,
+        "monthly_spend": {
+          "2025-03": 330.2,
+          "2025-04": 360.1
+        },
+        "avg_monthly_spend": 345.2,
+        "rank": 1
+      },
+      {
+        "merchant_name": "Bupa Vignesh",
+        "total_spend": 330.0,
+        "pct_of_total_spends": 2.1,
+        "pct_of_category_spends": 26.2,
+        "monthly_spend": {
+          "2025-03": 160.5,
+          "2025-04": 169.5
+        },
+        "avg_monthly_spend": 165.0,
+        "rank": 2
+      },
+      {
+        "merchant_name": "Electricity",
+        "total_spend": 69.1,
+        "pct_of_total_spends": 0.4,
+        "pct_of_category_spends": 5.5,
+        "monthly_spend": {
+          "2025-03": 0.0,
+          "2025-04": 69.1
+        },
+        "avg_monthly_spend": 34.6,
+        "rank": 3
+      },
+      {
+        "merchant_name": "Myki",
+        "total_spend": 38.0,
+        "pct_of_total_spends": 0.2,
+        "pct_of_category_spends": 3.0,
+        "monthly_spend": {
+          "2025-03": 0.0,
+          "2025-04": 38.0
+        },
+        "avg_monthly_spend": 19.0,
+        "rank": 4
+      },
+      {
+        "merchant_name": "Cursor",
+        "total_spend": 32.5,
+        "pct_of_total_spends": 0.2,
+        "pct_of_category_spends": 2.6,
+        "monthly_spend": {
+          "2025-03": 0.0,
+          "2025-04": 32.5
+        },
+        "avg_monthly_spend": 16.2,
+        "rank": 5
+      },
+      {
+        "merchant_name": "ChatGpt",
+        "total_spend": 30.0,
+        "pct_of_total_spends": 0.2,
+        "pct_of_category_spends": 2.4,
+        "monthly_spend": {
+          "2025-03": 30.0,
+          "2025-04": 0.0
+        },
+        "avg_monthly_spend": 15.0,
+        "rank": 6
+      },
+      {
+        "merchant_name": "Haircut",
+        "total_spend": 25.6,
+        "pct_of_total_spends": 0.2,
+        "pct_of_category_spends": 2.0,
+        "monthly_spend": {
+          "2025-03": 25.6,
+          "2025-04": 0.0
+        },
+        "avg_monthly_spend": 12.8,
+        "rank": 7
+      },
+      {
+        "merchant_name": "Amaysim",
+        "total_spend": 15.0,
+        "pct_of_total_spends": 0.1,
+        "pct_of_category_spends": 1.2,
+        "monthly_spend": {
+          "2025-03": 15.0,
+          "2025-04": 0.0
+        },
+        "avg_monthly_spend": 7.5,
+        "rank": 8
+      },
+      {
+        "merchant_name": "amaysim",
+        "total_spend": 15.0,
+        "pct_of_total_spends": 0.1,
+        "pct_of_category_spends": 1.2,
+        "monthly_spend": {
+          "2025-03": 0.0,
+          "2025-04": 15.0
+        },
+        "avg_monthly_spend": 7.5,
+        "rank": 9
+      },
+      {
+        "merchant_name": "ELectricity",
+        "total_spend": 12.8,
+        "pct_of_total_spends": 0.1,
+        "pct_of_category_spends": 1.0,
+        "monthly_spend": {
+          "2025-03": 0.0,
+          "2025-04": 12.8
+        },
+        "avg_monthly_spend": 6.4,
+        "rank": 10
+      },
+      {
+        "merchant_name": "Office works",
+        "total_spend": 1.7,
+        "pct_of_total_spends": 0.0,
+        "pct_of_category_spends": 0.1,
+        "monthly_spend": {
+          "2025-03": 1.7,
+          "2025-04": 0.0
+        },
+        "avg_monthly_spend": 0.8,
+        "rank": 11
+      }
+    ]
+  }
+}
